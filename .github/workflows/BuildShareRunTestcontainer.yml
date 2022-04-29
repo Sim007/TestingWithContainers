@@ -1,4 +1,4 @@
-name: BuildAndShareTestContainer
+name: BuildShareRunTestContainer
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -6,8 +6,6 @@ name: BuildAndShareTestContainer
 # documentation.
 
 on:
-  schedule:
-    - cron: '18 19 * * *'
   push:
     branches: [ main ]
     # Publish semver tags as releases.
@@ -69,3 +67,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      # Run
+      - name: Docker run testcontainer from GitHub packages  
+        run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers:main
