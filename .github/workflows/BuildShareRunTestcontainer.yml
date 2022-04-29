@@ -68,7 +68,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
             
-    run:
-      needs: build
-        - name: Docker run testcontainer from GitHub packages  
-          run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers:main
+      - name: Docker run testcontainer from GitHub packages  
+        run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers:main
