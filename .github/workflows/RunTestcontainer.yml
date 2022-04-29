@@ -1,4 +1,4 @@
-# GitHub action based on google.nl
+# GitHub action - most simple
 
 name: RunTestContainer
 on: push
