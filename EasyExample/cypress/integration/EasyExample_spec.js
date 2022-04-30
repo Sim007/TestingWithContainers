@@ -5,6 +5,6 @@ describe('Visit page', () => {
       cy.visit('blog/cloud/software-delivery-with-ci-cd-and-containers-continuous-is-the-new-norm/')
     })  
     it('finds the content "type"', () => {  
-      cy.contains('Johannes.Sim')
+      cy.contains('Johannes Sim')
     })
   })
