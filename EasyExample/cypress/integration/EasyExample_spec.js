@@ -2,7 +2,7 @@
 
 describe('Test craft.centric.eu', () => {
     it('Homepage ', () => {
-      cy.visit('/')
+      cy.visit('/blog/cloud/')
       cy.contains('craft@centric.eu')
     })  
     it('Blog of Johannes Sim', () => {  
