@@ -1,7 +1,10 @@
-# GitHub action - most simple
+# GitHub action - most simple run with cron every day at 700
 
 name: RunTestContainer
-on: public
+on: 
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 7 * * *'
 jobs:
   TestcontainerPullAndRun:
     runs-on: ubuntu-latest
