@@ -31,12 +31,11 @@ Production website: https://craft.centric.eu/
 
 ## Sources
 ### Dockerfile
-### Testscripts
-
-## CI/CD pipeline
-### Build Share Run
-### Run 
-### Run daily
+### Testscript
+### CI/CD pipeline
+#### Build Share Run
+#### Run 
+#### Run daily
 
 ## Workflow
 
