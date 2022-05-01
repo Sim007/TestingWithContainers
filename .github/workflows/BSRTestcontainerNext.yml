@@ -4,7 +4,6 @@ name: BuildShareRunTestContainerNext
 # More simple
 # - basic
 # - Docker
-# test
 
 on:
   push:
