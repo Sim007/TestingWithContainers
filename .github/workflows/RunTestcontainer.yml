@@ -9,5 +9,5 @@ jobs:
   TestcontainerPullAndRun:
     runs-on: ubuntu-latest
     steps:
-      - name: Docker run testcontainer from GitHub packages  
-        run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers:main
+      - name: Docker run testcontainer from ghcr.io 
+        run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers:latest
