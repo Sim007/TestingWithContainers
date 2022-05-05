@@ -51,6 +51,9 @@ jobs:
       - name: build container
         run:  docker buildx build -t ghcr.io/sim007/testingwithcontainers:latest ./EasyExample
  
+      - name: show container images
+        run:  docker image ls
+
       - name: share container to ghcr.io
         run:  docker image push ghcr.io/sim007/testingwithcontainers:latest
 
