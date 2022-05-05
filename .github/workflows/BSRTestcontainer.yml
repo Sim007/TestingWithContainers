@@ -48,17 +48,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Extract metadata (tags, labels) for Docker
-      # https://github.com/docker/metadata-action
-      - name: Extract Docker metadata
-        id: meta
-        uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
       - name: build container
-        run:  docker buildx build -t ghcr.io/sim007/testingwithcontainers ./EasyExample      
+        run:  docker buildx build -t ghcr.io/sim007/testingwithcontainers ./EasyExample
+ 
+      - name: share container to ghcr.io
+        run:  docker image push ghcr.io/sim007/testingwithcontainers
 
-      - name: Docker run testcontainer from GitHub packages  
-        run: docker container run -w /e2e ghcr.io/sim007/testingwithcontainers
+      - name: run container from ghcr.io 
+        run:  docker container run -w /e2e ghcr.io/sim007/testingwithcontainers
            
