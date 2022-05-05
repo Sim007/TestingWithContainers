@@ -49,7 +49,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: build container
-        run:  docker buildx build -t ghcr.io/sim007/testingwithcontainers:latest ./EasyExample
+        run:  docker buildx build --push -t ghcr.io/sim007/testingwithcontainers:latest ./EasyExample
  
       - name: show container images
         run:  docker image ls
