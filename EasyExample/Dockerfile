@@ -1,4 +1,4 @@
-FROM cypress/included:9.6.0
+FROM cypress/included:9.5.1-node16.14.0-slim-chrome99-ff97
 WORKDIR /e2e
 COPY ./*.json .
 COPY ./cypress/integration/*.js ./cypress/integration/
