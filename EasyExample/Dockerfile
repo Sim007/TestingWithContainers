@@ -1,4 +1,4 @@
-FROM cypress/included:9.4.1
+FROM cypress/included:9.6.0
 WORKDIR /e2e
 COPY ./*.json .
 COPY ./cypress/integration/*.js ./cypress/integration/
