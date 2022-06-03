@@ -3,7 +3,7 @@ describe('My First Test', () => {
       expect(true).to.equal(true)
     }),
     it('visit a page', () => {
-      cy.visit('https://nl.linkedin.com/in/johannes-sim-cd')
+      cy.visit('nl.linkedin.com/in/johannes-sim-cd')
       cy.contains('Johannes Sim')
     })
   })
